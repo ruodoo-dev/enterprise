@@ -7,6 +7,9 @@ from odoo.modules.module import get_module_resource
 
 class TestCRMLead(TestCrmCases):
 
+    def test_must_fail(self):
+        self.assertEqual(0, 1)
+
     def test_crm_lead_cancel(self):
         # I set a new sales team giving access rights of salesman.
         team = self.env['crm.team'].sudo(self.crm_salemanager.id).create({'name': "Phone Marketing"})
